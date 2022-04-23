@@ -1,3 +1,9 @@
+<?php
+
+require '../config.php';
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,8 +46,8 @@
                                 <input type="password" name="pass" id="pass" placeholder="Password"/>
                             </div>
                             <div class="form-group">
-                                <label for="re-pass"><i class="zmdi zmdi-lock-outline"></i></label>
-                                <input type="password" name="re_pass" id="re_pass" placeholder="Repeat your password"/>
+                                <label for="re-password"><i class="zmdi zmdi-lock-outline"></i></label>
+                                <input type="password" name="re-password" id="re-password" placeholder="Repeat your password"/>
                             </div>
                             <div class="form-group">
                                 <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />
