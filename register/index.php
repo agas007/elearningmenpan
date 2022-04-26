@@ -2,6 +2,17 @@
 
 require '../config.php';
 
+if( isset($_POST["signup"]) ) {
+    
+    if ( register($_POST) > 0 ) {
+        echo "<script>
+                alert('New record created successfully');
+                </script>";
+    } else {
+        echo mysqli_error($conn);
+    }
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -32,7 +43,11 @@ require '../config.php';
                 <div class="signup-content">
                     <div class="signup-form">
                         <h2 class="form-title">Sign up</h2>
-                        <form method="POST" class="register-form" id="register-form">
+                        <form action="" method="POST" class="register-form" id="register-form"> 
+                            <div class="form-group">
+                                <label for="username"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                                <input type="text" name="username" id="username" placeholder="Your Username"/>
+                            </div>
                             <div class="form-group">
                                 <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
                                 <input type="text" name="name" id="name" placeholder="Your Name"/>
@@ -42,16 +57,12 @@ require '../config.php';
                                 <input type="email" name="email" id="email" placeholder="Your Email"/>
                             </div>
                             <div class="form-group">
-                                <label for="pass"><i class="zmdi zmdi-lock"></i></label>
-                                <input type="password" name="pass" id="pass" placeholder="Password"/>
+                                <label for="password"><i class="zmdi zmdi-lock"></i></label>
+                                <input type="password" name="password" id="password" placeholder="Password"/>
                             </div>
                             <div class="form-group">
-                                <label for="re-password"><i class="zmdi zmdi-lock-outline"></i></label>
-                                <input type="password" name="re-password" id="re-password" placeholder="Repeat your password"/>
-                            </div>
-                            <div class="form-group">
-                                <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />
-                                <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree all statements in  <a href="#" class="term-service">Terms of service</a></label>
+                                <label for="repassword"><i class="zmdi zmdi-lock-outline"></i></label>
+                                <input type="password" name="repassword" id="repassword" placeholder="Repeat your password"/>
                             </div>
                             <div class="form-group form-button">
                                 <input type="submit" name="signup" id="signup" class="form-submit" value="Register"/>
