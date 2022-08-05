@@ -8,6 +8,7 @@ if( isset($_POST["signup"]) ) {
         echo "<script>
                 alert('New record created successfully');
                 </script>";
+        header("Location: /..");
     } else {
         echo mysqli_error($conn);
     }
