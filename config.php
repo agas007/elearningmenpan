@@ -1,16 +1,16 @@
 <?php 
 
 // database web
-$server = "127.0.0.1:3306";
-$user = "u748553090_agastya";
-$pass = "BIROsdmu!2020";
-$database = "u748553090_elearning";
+// $server = "127.0.0.1:3306";
+// $user = "u748553090_agastya";
+// $pass = "BIROsdmu!2020";
+// $database = "u748553090_elearning";
 
 // database local
-// $server = "localhost";
-// $user = "root";
-// $pass = "";
-// $database = "elearning";
+$server = "localhost";
+$user = "root";
+$pass = "";
+$database = "elearning";
  
 $conn = mysqli_connect($server, $user, $pass, $database);
  
@@ -18,6 +18,7 @@ if (!$conn) {
     die("<script>alert('Gagal tersambung dengan database.')</script>");
 }
  
+// function untuk register
 function register($data) {
     global $conn;
 
@@ -27,6 +28,7 @@ function register($data) {
     $email = $data["email"];
     $nama = $data["name"];
 
+    // konfirmasi password saat registrasi
     if ($password !== $repassword) {
         echo "<script>
         alert('Password tidak sesuai!');
@@ -34,8 +36,10 @@ function register($data) {
         return false;
     }
 
+    // enkripsi password
     $password = password_hash($password, PASSWORD_DEFAULT);
 
+    // input data registrasi ke database
     $register = "INSERT INTO users
                     VALUES
                 (NULL, '$username', '$email', '$password', '$nama')";
