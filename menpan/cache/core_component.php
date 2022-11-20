@@ -575,6 +575,7 @@ $cache = array (
     ),
     'theme' => 
     array (
+      'academi' => '/var/www/html/theme/academi',
       'boost' => '/var/www/html/theme/boost',
       'classic' => '/var/www/html/theme/classic',
     ),
@@ -4551,6 +4552,7 @@ $cache = array (
     'search_solr_document' => '/var/www/html/search/engine/solr/classes/document.php',
     'search_solr_engine' => '/var/www/html/search/engine/solr/classes/engine.php',
     'search_solr_schema' => '/var/www/html/search/engine/solr/classes/schema.php',
+    'theme_academi\\privacy\\provider' => '/var/www/html/theme/academi/classes/privacy/provider.php',
     'theme_boost\\admin_settingspage_tabs' => '/var/www/html/theme/boost/classes/admin_settingspage_tabs.php',
     'theme_boost\\autoprefixer' => '/var/www/html/theme/boost/classes/autoprefixer.php',
     'theme_boost\\boostnavbar' => '/var/www/html/theme/boost/classes/boostnavbar.php',
@@ -5560,6 +5562,7 @@ $cache = array (
       ),
       'theme' => 
       array (
+        'academi' => '/var/www/html/theme/academi/lib.php',
         'boost' => '/var/www/html/theme/boost/lib.php',
         'classic' => '/var/www/html/theme/classic/lib.php',
       ),
@@ -5926,6 +5929,7 @@ $cache = array (
       ),
       'theme' => 
       array (
+        'academi' => '/var/www/html/theme/academi/settings.php',
         'boost' => '/var/www/html/theme/boost/settings.php',
         'classic' => '/var/www/html/theme/classic/settings.php',
       ),
