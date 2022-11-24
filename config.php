@@ -150,7 +150,7 @@ $CFG->wwwroot   = 'http://elearning.menpan.go.id';
 // - On Windows systems you might specify something like 'c:\moodledata'
 
 //$CFG->dataroot  = '/home/example/moodledata';
-$CFG->dataroot  = '/var/www/html/menpan';
+$CFG->dataroot  = '/var/www/menpan';
 
 
 //=========================================================================
