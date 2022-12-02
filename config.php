@@ -133,7 +133,7 @@ $CFG->dboptions = array(
 // If you need both intranet and Internet access please read
 // http://docs.moodle.org/en/masquerading
 
-$CFG->wwwroot   = 'http://elearning.menpan.go.id';
+$CFG->wwwroot   = 'https://elearning.menpan.go.id';
 
 
 //=========================================================================
@@ -365,7 +365,7 @@ $CFG->admin = 'admin';
 //
 // Enable when using external SSL appliance for performance reasons.
 // Please note that site may be accessible via http: or https:, but not both!
-//      $CFG->sslproxy = true;
+      $CFG->sslproxy = true;
 //
 // This setting will cause the userdate() function not to fix %d in
 // date strings, and just let them show with a zero prefix.
